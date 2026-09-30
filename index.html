@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Academia Pasillo del Rey</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#09101f;color:#fff;line-height:1.55}
+header{position:sticky;top:0;background:#101936f2;padding:14px;border-bottom:1px solid #334066;z-index:5}nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{color:#f4c95d;font-weight:800}nav a{color:#fff;text-decoration:none;margin:0 7px;font-size:14px}
+.hero{text-align:center;padding:90px 20px;background:radial-gradient(circle,#2b3b70,#09101f 65%)}h1{font-size:clamp(40px,8vw,72px);line-height:1.05}.hero p{max-width:700px;margin:20px auto;color:#c4cce1;font-size:18px}
+section{max-width:1100px;margin:auto;padding:65px 20px}.title{text-align:center;margin-bottom:32px}.title h2{font-size:34px}.title p{color:#b9c1d8}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#151e39;border:1px solid #334066;border-radius:16px;padding:24px}.card h3{color:#f4c95d}.btn{display:inline-block;padding:12px 18px;border-radius:9px;text-decoration:none;font-weight:bold;margin:4px;border:0;cursor:pointer}.primary{background:#f4c95d;color:#111}.secondary{border:1px solid #7180aa;color:#fff}.form{max-width:700px;margin:auto}.form input,.form select,.form textarea{width:100%;padding:12px;margin:6px 0 12px;background:#0d1530;color:#fff;border:1px solid #334066;border-radius:8px}.notice{display:none;padding:12px;margin-top:12px;background:#173d2d;border-radius:8px}.price{font-size:23px;color:#f4c95d;font-weight:bold}footer{text-align:center;padding:30px;border-top:1px solid #334066;color:#aab3cc}
+@media(max-width:750px){nav{flex-direction:column}.grid{grid-template-columns:1fr}nav a{font-size:13px;margin:0 3px}}
+</style></head><body>
+<header><nav><div class="brand">♟ PASILLO DEL REY</div><div><a href="#inicio">Inicio</a><a href="#clases">Clases</a><a href="#registro">Inscripción</a><a href="#libros">Libros</a><a href="#contacto">Contacto</a></div></nav></header>
+
+<section class="hero" id="inicio"><h1>Academia de Ajedrez<br>Pasillo del Rey</h1><p>Aprende, entrena y compite. Inscríbete en línea y recibe información sobre clases y torneos.</p><a class="btn primary" href="#registro">♟ Inscribirme</a><a class="btn secondary" href="#libros">📚 Ver libros</a></section>
+
+<section id="clases"><div class="title"><h2>Clases de ajedrez</h2><p>Programas para diferentes niveles.</p></div><div class="grid">
+<div class="card"><h3>♙ Inicial</h3><p>Reglas, movimientos, jaque, mate y tácticas básicas.</p></div>
+<div class="card"><h3>♞ Intermedio</h3><p>Aperturas, cálculo, estrategia, finales y análisis.</p></div>
+<div class="card"><h3>♛ Competitivo</h3><p>Preparación para torneos y entrenamiento avanzado.</p></div>
+</div></section>
+
+<section id="registro"><div class="title"><h2>Inscripción de alumnos</h2><p>Registra tus datos para solicitar información.</p></div><div class="card form">
+<form id="studentForm">
+<label>Nombre completo</label><input id="name" required>
+<label>Edad</label><input id="age" type="number" min="1" max="120" required>
+<label>WhatsApp</label><input id="phone" required placeholder="901148187">
+<label>Correo</label><input id="email" type="email">
+<label>Nivel</label><select id="level" required><option value="">Selecciona</option><option>Inicial</option><option>Intermedio</option><option>Competitivo</option></select>
+<label>Mensaje</label><textarea id="message" rows="3"></textarea>
+<button class="btn primary">Registrar alumno</button></form>
+<div class="notice" id="notice"></div>
+</div></section>
+
+<section id="libros"><div class="title"><h2>📚 Libros virtuales</h2><p>Material digital para complementar tu entrenamiento.</p></div><div class="grid">
+<div class="card"><h3>Fundamentos del Ajedrez</h3><p>Material para comenzar a estudiar.</p><div class="price">S/ 15</div><a class="btn primary" target="_blank" href="https://wa.me/51901148187?text=Quiero%20comprar%20Fundamentos%20del%20Ajedrez">Comprar por WhatsApp</a></div>
+<div class="card"><h3>Táctica y Combinaciones</h3><p>Ejercicios para mejorar el cálculo.</p><div class="price">S/ 20</div><a class="btn primary" target="_blank" href="https://wa.me/51901148187?text=Quiero%20comprar%20T%C3%A1ctica%20y%20Combinaciones">Comprar por WhatsApp</a></div>
+<div class="card"><h3>Preparación para Torneos</h3><p>Guía de entrenamiento competitivo.</p><div class="price">S/ 25</div><a class="btn primary" target="_blank" href="https://wa.me/51901148187?text=Quiero%20comprar%20Preparaci%C3%B3n%20para%20Torneos">Comprar por WhatsApp</a></div>
+</div><p style="text-align:center;color:#b9c1d8">Los botones actuales generan pedidos por WhatsApp. El pago automático se puede conectar después.</p></section>
+
+<section id="contacto"><div class="card" style="text-align:center"><h2>Contacto</h2><p>📞 901 148 187 · 926 291 606</p><p>📍 Ica • Nasca</p><a class="btn primary" target="_blank" href="https://wa.me/51901148187">WhatsApp</a></div></section>
+<footer>© 2026 Academia de Ajedrez Pasillo del Rey ♟️</footer>
+
+<script>
+const SUPABASE_URL="PON_AQUI_TU_PROJECT_URL";
+const SUPABASE_ANON_KEY="PON_AQUI_TU_ANON_KEY";
+document.getElementById("studentForm").addEventListener("submit",async e=>{
+e.preventDefault();const n=document.getElementById("notice");
+const data={nombre:name.value,edad:Number(age.value),whatsapp:phone.value,email:email.value,nivel:level.value,mensaje:message.value};
+if(SUPABASE_URL.startsWith("PON_AQUI")){n.style.display="block";n.textContent="El formulario está preparado. Falta conectar la base de datos Supabase.";return}
+try{let r=await fetch(SUPABASE_URL+"/rest/v1/alumnos",{method:"POST",headers:{"Content-Type":"application/json","apikey":SUPABASE_ANON_KEY,"Authorization":"Bearer "+SUPABASE_ANON_KEY,"Prefer":"return=minimal"},body:JSON.stringify(data)});if(!r.ok)throw 0;n.style.display="block";n.textContent="¡Alumno registrado correctamente!";e.target.reset()}catch{x=>{n.style.display="block";n.textContent="Revisa la configuración de la base de datos."}}
+});
+</script></body></html>
